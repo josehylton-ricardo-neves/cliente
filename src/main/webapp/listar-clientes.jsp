@@ -6,20 +6,48 @@
 <head>
 <meta charset="UTF-8">
 <title>Listar Clientes</title>
-<meta http-equiv= “refresh” content="5; URL='/cliente/cadastrar-cliente.jsp'"/>
+<link rel="stylesheet" type="text/css" href="css/listar-clientes.css">
 </head>
 <body>
-	<p>Lista de todos os clientes</p>
+	<div>
+		<div>
+		<h1>Lista de todos os clientes</h1>
+		</div>
+
+		<div>
+		 <table>
+	        <thead>
+	            <tr>
+	                <th>Nome</th>
+	                <th>Email</th>
+	                <th>Telefone</th>
+	                <th>Editar</th>
+	                <th>Remover</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <c:forEach items="${listaClientes}" var="cliente">
+	                <tr>
+	                    <td>${cliente.nome}</td>
+	                    <td>${cliente.email}</td>
+	                    <td>${cliente.telefone}</td>
+	                    <td>
+	                        <a href="/cliente/ExibirCliente?id=${cliente.id}">editar</a>
+						</td>
+						<td>
+	                        <a href="/cliente/ExcluirCliente?id=${cliente.id}">remover</a>
+	                    </td>
+	                </tr>
+	            </c:forEach>
+	        </tbody>
+	    </table>
+	    </div>
 	
-	<ul>
-		<c:forEach items="${listaClientes}" var="cliente">		
-			<li>${cliente.nome} - ${cliente.email} - ${cliente.telefone}
-				<a href="/cliente/ExibirCliente?id=${cliente.id}">editar</a>
-				<a href="/cliente/ExcluirCliente?id=${cliente.id}">remover</a>
-			</li>
-		</c:forEach>		
-	</ul>
+		<div class="button-container">
+		<button type="button" class="styled-button" onclick="window.location.href='/cliente/cadastrar-cliente.jsp'">Ir para a Página de Cadastro</button>
+		</div>
 	
-	<a href="/cliente/cadastrar-cliente.jsp">Cadastrar novo cliente</a>
+	</div>
+	
 </body>
 </html>

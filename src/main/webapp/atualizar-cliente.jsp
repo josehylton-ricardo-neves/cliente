@@ -4,23 +4,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="css/atualizar-cliente.css">
+<meta charset="UTF-8">
 <title>Atualizar Cliente</title>
 </head>
 <body>
-		<h2>Atualizar cliente</h2>
-		<form action="${atualizarClienteServlet}" method="post">
-		
+
+	<div class="form-container">
+ 		<form action="${atualizarClienteServlet}" method="post">
+ 		
+			<h3>ATUALIZAR CLIENTE</h3>
+			
 			<input type="hidden" name="id" value="${cliente.id}"/>
 			
-			Nome: <input type="text" name="nome" value="${cliente.nome}"/>
-			<br>
-			Email: <input type="text" name="email" value="${cliente.email}" />
-			<br>
-			Telefone: <input type="text" name="telefone" value="${cliente.telefone}" />
-			<br>
-			<input type="submit" value="Atualizar" />
-		</form>
+            <div class="input-container">
+                <input type="text" name="nome" value="${cliente.nome}" />
+            </div>
+            
+            <div class="input-container"> 
+                <input type="text" name="email" value="${cliente.email}" />
+            </div>
+            
+            <div class="input-container"> 
+                <input type="text" name="telefone" value="${cliente.telefone}" />
+            </div>
+
+            <input type="submit" value="Atualizar">
+        </form>
+        
+    </div>
 
 </body>
 </html>

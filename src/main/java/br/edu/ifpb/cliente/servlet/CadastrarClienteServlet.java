@@ -36,9 +36,7 @@ public class CadastrarClienteServlet extends HttpServlet {
     	    	.build()
     	    	);
 
-    	RequestDispatcher rd = req.getRequestDispatcher("/cliente-cadastrado.jsp");
-		req.setAttribute("nomeCliente", req.getParameter("nome"));
-		rd.forward(req, res);
+    	res.sendRedirect("ListaCliente");
     }
 
 }
