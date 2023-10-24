@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Listar Clientes</title>
 <link rel="stylesheet" type="text/css" href="css/listar-clientes.css">
+<script src="js/listar-clientes.js"></script>
 </head>
 <body>
 	<div>
@@ -35,7 +36,8 @@
 	                        <a href="/cliente/ExibirCliente?id=${cliente.id}">editar</a>
 						</td>
 						<td>
-	                        <a href="/cliente/ExcluirCliente?id=${cliente.id}">remover</a>
+	                        <!-- <a href="/cliente/ExcluirCliente?id=${cliente.id}">remover</a>  -->
+	                        <a href="#" onclick="confirmarExclusao(${cliente.id})">remover</a>
 	                    </td>
 	                </tr>
 	            </c:forEach>

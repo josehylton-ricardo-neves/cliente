@@ -76,3 +76,8 @@ form .input-container svg {
     text-align: right;
     color: red;
 }
+
+.error-message {
+    color: red;
+    font-size: 12px;
+}

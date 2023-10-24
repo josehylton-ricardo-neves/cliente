@@ -2,7 +2,6 @@ package br.edu.ifpb.cliente.servlet;
 
 import java.io.IOException;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,10 +24,6 @@ public class CadastrarClienteServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-    	
-    	if(req.getParameter("nome") == "" || req.getParameter("email") == "" || req.getParameter("telefone") == "") {
-    		throw new RuntimeException("insira todos os campos");
-    	}
 
     	Cliente.addCliente(new Cliente.Builder().setNome(req.getParameter("nome"))
     	    	.setEmail(req.getParameter("email"))
