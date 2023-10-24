@@ -19,7 +19,7 @@
 		</div>
             
 		<div class="button-container"> 
-			<button type="button" class="styled-button" onclick="window.location.href='/cliente/listar-cliente.jsp'">Listar Clientes</button>
+			<button type="button" class="styled-button" onclick="window.location.href='/cliente/listar-clientes.jsp'">Listar Clientes</button>
 		</div>  
     </div>
 
